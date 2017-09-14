@@ -12,7 +12,11 @@ import entity.Affiche;
 import entity.User;
 import entity.Task;
 import biz.CommBiz;
-
+/**
+ * change by dingxiaotao
+ * @author dingxiaotao
+ *
+ */
 public class AfficheAction {
 	private static final String TOTEAMMAIL = "toteammail";
 	private static final String TOMAILMANAGEMENT = "tomailmanagement";
