@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+    
+    
+ <!--   <!DOCTYPE struts SYSTEM
+    "E:/dtd/struts-2.1.dtd">   
+-->
+<struts>
+
+    <package name="default" namespace="/" extends="json-default">
+    
+       <!--  <global-results>
+        	<result>/data.jsp</result>
+        </global-results> -->
+        <action name="user" class="userAction">
+        	 <result name="success" type="json">
+        		 <param name = "root">msg</param>
+        	<!-- 	<param name = "callbackParameter">jsoncallback</param>  -->
+        	 </result>
+            <result name="login">index.html</result>
+            <result name="touser">/pages/user.html</result>
+            <result name="tomenu">/pages/menu.jsp</result>
+            <result name="tousermanage">/pages/system/usermanage.jsp</result>
+             <result name="torolemanage">/pages/system/rolemanage.jsp</result>
+             <result name="touserinfo">/pages/system/userInfo.jsp</result>
+              <result name="toroleinfo">/pages/system/roleInfo.jsp</result>
+              <result name="tonewuser">/pages/system/newUser.jsp</result>
+        </action>
+        <action name="work" class="workAction">
+            <result name="success">/pages/menu.jsp</result>
+             <result name="tocontinue">/pages/workflow/continue.jsp</result>
+             <result name="tosee">/pages/workflow/see.jsp</result>
+             <result name="tosubmit">/pages/workflow/submit.jsp</result>
+              <result name="tocreate">/pages/workflow/create.jsp</result>
+              <result name="toseeResult">/pages/workflow/seeResult.jsp</result>
+        </action>
+          <action name="task" class="taskAction">
+            <result name="topersontask">/pages/persontask/persontask.jsp</result>
+        </action>
+        <action name="mail" class="mailAction">
+            <result name="toreceive">/pages/message/receive.jsp</result>
+            <result name="tosend">/pages/message/send.jsp</result>
+            <result name="todashbin">/pages/message/dashbin.jsp</result>
+            <result name="success">/pages/menu.jsp</result>
+            <result name="tomaildetail">/pages/message/maildetail.jsp</result>
+        </action>
+        <action name="affiche" class="afficheAction">
+          	<result name="success">/pages/menu.jsp</result>
+            <result name="tomailmanagement">/pages/mail/mailmanagement.jsp</result>
+            <result name="toteammail">/pages/mail/teammail.jsp</result>
+        </action>
+         <action name="right" class="rightAction">
+            <result name="tomenu">/pages/menu.jsp</result>
+            <result name="success">/pages/menu.jsp</result>
+            <result name="torolemanage">/pages/system/rolemanage.jsp</result>
+        </action>
+      
+    </package>
+  
+
+
+</struts>
